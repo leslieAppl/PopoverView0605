@@ -25,18 +25,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVD-iq-Sv9">
-                                <rect key="frame" x="167" y="433" width="80" height="30"/>
-                                <state key="normal" title="Form Sheet"/>
+                                <rect key="frame" x="140" y="433" width="134" height="30"/>
+                                <state key="normal" title="Form Sheet on iPad"/>
                                 <connections>
-                                    <segue destination="jSc-tX-Ice" kind="presentation" identifier="showCover" modalPresentationStyle="formSheet" id="bTh-kf-oe9"/>
+                                    <segue destination="jSc-tX-Ice" kind="presentation" identifier="" modalPresentationStyle="formSheet" id="bTh-kf-oe9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Ae-Ieq">
+                                <rect key="frame" x="131" y="752" width="152" height="30"/>
+                                <state key="normal" title="Form Sheet on iPhone"/>
+                                <connections>
+                                    <segue destination="8vs-wo-Dwx" kind="presentation" modalPresentationStyle="formSheet" id="KLA-a5-fin"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fWW-Ae-Ieq" secondAttribute="bottom" constant="80" id="0h8-hM-8IY"/>
                             <constraint firstItem="Dgp-RH-m2v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7T1-dd-ZBm"/>
                             <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wpu-IV-lYl"/>
                             <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hnh-Ne-fYb"/>
+                            <constraint firstItem="fWW-Ae-Ieq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdo-bq-CP8"/>
                             <constraint firstItem="Dgp-RH-m2v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="x6L-U1-tUC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,6 +119,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVM-3U-fue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lyt-IS-Let">
+            <objects>
+                <viewController id="8vs-wo-Dwx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H5k-Z9-uzr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book7" translatesAutoresizingMaskIntoConstraints="NO" id="47T-BQ-ebl">
+                                <rect key="frame" x="109.5" y="271" width="195" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="XGw-65-NtR"/>
+                                    <constraint firstAttribute="height" constant="300" id="kkA-E1-R4k"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="47T-BQ-ebl" firstAttribute="centerY" secondItem="H5k-Z9-uzr" secondAttribute="centerY" id="LTe-9T-J82"/>
+                            <constraint firstItem="47T-BQ-ebl" firstAttribute="centerX" secondItem="H5k-Z9-uzr" secondAttribute="centerX" id="WYB-1P-8Ba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c7j-yK-hhU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Q9-7C-bre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="584"/>
         </scene>
     </scenes>
     <resources>

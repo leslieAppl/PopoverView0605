@@ -15,10 +15,3 @@ class FormSheetViewController: UIViewController {
         
     }
 }
-
-extension FormSheetViewController: UIAdaptivePresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
-    
-}
