@@ -35,7 +35,7 @@
                                 <rect key="frame" x="131" y="752" width="152" height="30"/>
                                 <state key="normal" title="Form Sheet on iPhone"/>
                                 <connections>
-                                    <segue destination="8vs-wo-Dwx" kind="presentation" modalPresentationStyle="formSheet" id="KLA-a5-fin"/>
+                                    <segue destination="8vs-wo-Dwx" kind="presentation" modalPresentationStyle="overCurrentContext" id="KLA-a5-fin"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,36 +120,47 @@
             </objects>
             <point key="canvasLocation" x="795" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--iPhone Form Sheet View Controller-->
         <scene sceneID="Lyt-IS-Let">
             <objects>
-                <viewController id="8vs-wo-Dwx" sceneMemberID="viewController">
+                <viewController id="8vs-wo-Dwx" customClass="iPhoneFormSheetViewController" customModule="PopoverView0605" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H5k-Z9-uzr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book7" translatesAutoresizingMaskIntoConstraints="NO" id="47T-BQ-ebl">
-                                <rect key="frame" x="109.5" y="271" width="195" height="300"/>
+                                <rect key="frame" x="109.5" y="298" width="195" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="195" id="XGw-65-NtR"/>
                                     <constraint firstAttribute="height" constant="300" id="kkA-E1-R4k"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-dK-JHJ">
+                                <rect key="frame" x="304.5" y="276" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="8vs-wo-Dwx" eventType="touchUpInside" id="hfN-4f-k3L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="47T-BQ-ebl" firstAttribute="centerY" secondItem="H5k-Z9-uzr" secondAttribute="centerY" id="LTe-9T-J82"/>
+                            <constraint firstItem="dGj-dK-JHJ" firstAttribute="trailing" secondItem="47T-BQ-ebl" secondAttribute="trailing" constant="20" id="W2v-W9-wxW"/>
                             <constraint firstItem="47T-BQ-ebl" firstAttribute="centerX" secondItem="H5k-Z9-uzr" secondAttribute="centerX" id="WYB-1P-8Ba"/>
+                            <constraint firstItem="dGj-dK-JHJ" firstAttribute="top" secondItem="47T-BQ-ebl" secondAttribute="top" constant="-22" id="jvC-Hj-obN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c7j-yK-hhU"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Q9-7C-bre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="584"/>
+            <point key="canvasLocation" x="779.71014492753625" y="583.92857142857144"/>
         </scene>
     </scenes>
     <resources>
         <image name="book7" width="108" height="166"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
     </resources>
 </document>
