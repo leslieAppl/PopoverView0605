@@ -29,5 +29,9 @@ class ViewController: UIViewController {
             //So, PopoverViewController class has to conform UIAdaptivePresentationControllerDelegate protocol.
             controller.presentationController?.delegate = controller
         }
+        else if segue.identifier == "showCover" {
+            let controller = segue.destination as! FormSheetViewController
+            controller.presentationController?.delegate = controller
+        }
     }
 }

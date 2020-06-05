@@ -14,6 +14,7 @@
 		CE9DEEC92489EC710005D42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9DEEC82489EC710005D42C /* Assets.xcassets */; };
 		CE9DEECC2489EC710005D42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9DEECA2489EC710005D42C /* LaunchScreen.storyboard */; };
 		CE9DEED42489ED390005D42C /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEED32489ED390005D42C /* PopoverViewController.swift */; };
+		CE9DEED6248A67AF0005D42C /* FormSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CE9DEECB2489EC710005D42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9DEECD2489EC710005D42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9DEED32489ED390005D42C /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				CE9DEEC12489EC6F0005D42C /* SceneDelegate.swift */,
 				CE9DEEC32489EC6F0005D42C /* ViewController.swift */,
 				CE9DEED32489ED390005D42C /* PopoverViewController.swift */,
+				CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */,
 				CE9DEEC52489EC6F0005D42C /* Main.storyboard */,
 				CE9DEEC82489EC710005D42C /* Assets.xcassets */,
 				CE9DEECA2489EC710005D42C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9DEED6248A67AF0005D42C /* FormSheetViewController.swift in Sources */,
 				CE9DEED42489ED390005D42C /* PopoverViewController.swift in Sources */,
 				CE9DEEC42489EC6F0005D42C /* ViewController.swift in Sources */,
 				CE9DEEC02489EC6F0005D42C /* AppDelegate.swift in Sources */,
