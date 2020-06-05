@@ -13,6 +13,7 @@
 		CE9DEEC72489EC6F0005D42C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9DEEC52489EC6F0005D42C /* Main.storyboard */; };
 		CE9DEEC92489EC710005D42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9DEEC82489EC710005D42C /* Assets.xcassets */; };
 		CE9DEECC2489EC710005D42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9DEECA2489EC710005D42C /* LaunchScreen.storyboard */; };
+		CE9DEED42489ED390005D42C /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEED32489ED390005D42C /* PopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE9DEEC82489EC710005D42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9DEECB2489EC710005D42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9DEECD2489EC710005D42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9DEED32489ED390005D42C /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE9DEEBF2489EC6F0005D42C /* AppDelegate.swift */,
 				CE9DEEC12489EC6F0005D42C /* SceneDelegate.swift */,
 				CE9DEEC32489EC6F0005D42C /* ViewController.swift */,
+				CE9DEED32489ED390005D42C /* PopoverViewController.swift */,
 				CE9DEEC52489EC6F0005D42C /* Main.storyboard */,
 				CE9DEEC82489EC710005D42C /* Assets.xcassets */,
 				CE9DEECA2489EC710005D42C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9DEED42489ED390005D42C /* PopoverViewController.swift in Sources */,
 				CE9DEEC42489EC6F0005D42C /* ViewController.swift in Sources */,
 				CE9DEEC02489EC6F0005D42C /* AppDelegate.swift in Sources */,
 				CE9DEEC22489EC6F0005D42C /* SceneDelegate.swift in Sources */,
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				INFOPLIST_FILE = PopoverView0605/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.PopoverView0605;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				INFOPLIST_FILE = PopoverView0605/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.appl.leslie.PopoverView0605;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
