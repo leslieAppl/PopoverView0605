@@ -12,13 +12,13 @@ class iPhoneFormSheetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupGestureRecognizers()
     }
     
     @IBAction func closeBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
     
     /*
     // MARK: - Navigation
@@ -30,4 +30,15 @@ class iPhoneFormSheetViewController: UIViewController {
     }
     */
 
+}
+
+extension iPhoneFormSheetViewController {
+    func setupGestureRecognizers() {
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(gestureRecognizer:)))
+        view.addGestureRecognizer(panRecognizer)
+    }
+    
+    @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
 }

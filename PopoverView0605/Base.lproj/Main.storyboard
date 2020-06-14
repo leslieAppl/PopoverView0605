@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-RH-m2v">
-                                <rect key="frame" x="178.5" y="124" width="57" height="30"/>
+                                <rect key="frame" x="178.5" y="288" width="57" height="30"/>
                                 <state key="normal" title="Popover"/>
                                 <connections>
                                     <segue destination="rHa-t7-gPW" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="Dgp-RH-m2v" id="4Sc-4e-1RN">
@@ -25,35 +25,78 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVD-iq-Sv9">
-                                <rect key="frame" x="140" y="433" width="134" height="30"/>
+                                <rect key="frame" x="140" y="398" width="134" height="30"/>
                                 <state key="normal" title="Form Sheet on iPad"/>
                                 <connections>
                                     <segue destination="jSc-tX-Ice" kind="presentation" identifier="" modalPresentationStyle="formSheet" id="bTh-kf-oe9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Ae-Ieq">
-                                <rect key="frame" x="131" y="752" width="152" height="30"/>
+                                <rect key="frame" x="131" y="508" width="152" height="30"/>
                                 <state key="normal" title="Form Sheet on iPhone"/>
                                 <connections>
                                     <segue destination="8vs-wo-Dwx" kind="presentation" modalPresentationStyle="overCurrentContext" id="KLA-a5-fin"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-N5-Qm1">
+                                <rect key="frame" x="374" y="430" width="40" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.59851241440000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI1-mb-Mx4">
+                                <rect key="frame" x="0.0" y="430" width="40" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.59851241440000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medals" translatesAutoresizingMaskIntoConstraints="NO" id="KVG-Q2-kpQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="oYI-qV-R1n"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeUpSign" translatesAutoresizingMaskIntoConstraints="NO" id="aYw-Eb-B5X">
+                                <rect key="frame" x="179.5" y="807" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="SFL-oC-8EA"/>
+                                    <constraint firstAttribute="width" constant="55" id="ym6-5A-s9G"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeDownSign" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-B8-e8O">
+                                <rect key="frame" x="179.5" y="44" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="MKo-sn-cuU"/>
+                                    <constraint firstAttribute="width" constant="55" id="Oqw-pY-657"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fWW-Ae-Ieq" secondAttribute="bottom" constant="80" id="0h8-hM-8IY"/>
+                            <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sh-Kk-ZKJ"/>
+                            <constraint firstItem="aYw-Eb-B5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="70C-AE-q8G"/>
                             <constraint firstItem="Dgp-RH-m2v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7T1-dd-ZBm"/>
-                            <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wpu-IV-lYl"/>
-                            <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hnh-Ne-fYb"/>
+                            <constraint firstItem="NK2-N5-Qm1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="817-dW-Qi3"/>
+                            <constraint firstItem="aYw-Eb-B5X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8ke-8u-tVi"/>
+                            <constraint firstItem="nI1-mb-Mx4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9mn-4F-kus"/>
+                            <constraint firstItem="Dgp-RH-m2v" firstAttribute="top" secondItem="KVG-Q2-kpQ" secondAttribute="bottom" constant="20" id="HmP-O0-SVy"/>
+                            <constraint firstItem="nI1-mb-Mx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mgb-XO-cvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NK2-N5-Qm1" secondAttribute="trailing" id="b7n-g0-Eza"/>
+                            <constraint firstItem="KVG-Q2-kpQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dQL-gt-h73"/>
+                            <constraint firstItem="KVG-Q2-kpQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h9y-jO-8Aw"/>
+                            <constraint firstItem="KVG-Q2-kpQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kPF-h5-fB9"/>
+                            <constraint firstItem="RVD-iq-Sv9" firstAttribute="top" secondItem="Dgp-RH-m2v" secondAttribute="bottom" constant="80" id="lhJ-eo-nco"/>
+                            <constraint firstItem="Lqw-B8-e8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nPe-bN-C0q"/>
                             <constraint firstItem="fWW-Ae-Ieq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdo-bq-CP8"/>
-                            <constraint firstItem="Dgp-RH-m2v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="x6L-U1-tUC"/>
+                            <constraint firstItem="fWW-Ae-Ieq" firstAttribute="top" secondItem="RVD-iq-Sv9" secondAttribute="bottom" constant="80" id="t1e-iB-RS5"/>
+                            <constraint firstItem="Lqw-B8-e8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbC-d4-RsT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="121"/>
+            <point key="canvasLocation" x="86.956521739130437" y="120.53571428571428"/>
         </scene>
         <!--Popover View Controller-->
         <scene sceneID="H2x-mC-C0i">
@@ -160,7 +203,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SwipeDownSign" width="82" height="74"/>
+        <image name="SwipeUpSign" width="82" height="74"/>
         <image name="book7" width="108" height="166"/>
         <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="medals" width="375" height="217.5"/>
     </resources>
 </document>
