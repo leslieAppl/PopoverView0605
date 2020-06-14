@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE828701248B0301008CA032 /* iPhoneFormSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE828700248B0301008CA032 /* iPhoneFormSheetViewController.swift */; };
+		CE9C06EF249675360070D747 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9C06EE249675360070D747 /* GamesTableViewController.swift */; };
+		CE9C06F12496759D0070D747 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9C06F02496759D0070D747 /* SlideInPresentationManager.swift */; };
 		CE9DEEC02489EC6F0005D42C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEEBF2489EC6F0005D42C /* AppDelegate.swift */; };
 		CE9DEEC22489EC6F0005D42C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEEC12489EC6F0005D42C /* SceneDelegate.swift */; };
 		CE9DEEC42489EC6F0005D42C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEEC32489EC6F0005D42C /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		CE828700248B0301008CA032 /* iPhoneFormSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneFormSheetViewController.swift; sourceTree = "<group>"; };
+		CE9C06EE249675360070D747 /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
+		CE9C06F02496759D0070D747 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		CE9DEEBC2489EC6F0005D42C /* PopoverView0605.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopoverView0605.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9DEEBF2489EC6F0005D42C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9DEEC12489EC6F0005D42C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE9C06EA249674680070D747 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE9DEEC32489EC6F0005D42C /* ViewController.swift */,
+				CE9DEED32489ED390005D42C /* PopoverViewController.swift */,
+				CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */,
+				CE828700248B0301008CA032 /* iPhoneFormSheetViewController.swift */,
+				CE9C06EE249675360070D747 /* GamesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE9C06EB2496746E0070D747 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE9C06EC249674890070D747 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				CE9C06F02496759D0070D747 /* SlideInPresentationManager.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		CE9C06ED249674C80070D747 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CE9DEEB32489EC6F0005D42C = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +100,12 @@
 		CE9DEEBE2489EC6F0005D42C /* PopoverView0605 */ = {
 			isa = PBXGroup;
 			children = (
+				CE9C06EC249674890070D747 /* Presentations */,
+				CE9C06EB2496746E0070D747 /* Models */,
+				CE9C06ED249674C80070D747 /* Views */,
+				CE9C06EA249674680070D747 /* Controllers */,
 				CE9DEEBF2489EC6F0005D42C /* AppDelegate.swift */,
 				CE9DEEC12489EC6F0005D42C /* SceneDelegate.swift */,
-				CE9DEEC32489EC6F0005D42C /* ViewController.swift */,
-				CE9DEED32489ED390005D42C /* PopoverViewController.swift */,
-				CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */,
-				CE828700248B0301008CA032 /* iPhoneFormSheetViewController.swift */,
 				CE9DEEC52489EC6F0005D42C /* Main.storyboard */,
 				CE9DEEC82489EC710005D42C /* Assets.xcassets */,
 				CE9DEECA2489EC710005D42C /* LaunchScreen.storyboard */,
@@ -151,7 +189,9 @@
 				CE9DEED42489ED390005D42C /* PopoverViewController.swift in Sources */,
 				CE9DEEC42489EC6F0005D42C /* ViewController.swift in Sources */,
 				CE828701248B0301008CA032 /* iPhoneFormSheetViewController.swift in Sources */,
+				CE9C06F12496759D0070D747 /* SlideInPresentationManager.swift in Sources */,
 				CE9DEEC02489EC6F0005D42C /* AppDelegate.swift in Sources */,
+				CE9C06EF249675360070D747 /* GamesTableViewController.swift in Sources */,
 				CE9DEEC22489EC6F0005D42C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
