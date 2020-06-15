@@ -60,10 +60,19 @@ extension ViewController {
     }
     
     @objc func handelLeftEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
-        performSegue(withIdentifier: "SummerSegue", sender: nil)
+        
+        /// If didn't have the .began state checking, there will be the warning below
+        /// Warning: Attempt to present * on * which is already presenting
+        if gestureRecognizer.state == .began {
+            performSegue(withIdentifier: "SummerSegue", sender: nil)
+        }
     }
     
     @objc func handelRightEdgePan(gestuerRecognizer: UIScreenEdgePanGestureRecognizer) {
-        performSegue(withIdentifier: "WinterSegue", sender: nil)
+        /// If didn't have the .began state checking, there will be the warning below
+        /// Warning: Attempt to present * on * which is already presenting
+        if gestuerRecognizer.state == .began {
+            performSegue(withIdentifier: "WinterSegue", sender: nil)
+        }
     }
 }
