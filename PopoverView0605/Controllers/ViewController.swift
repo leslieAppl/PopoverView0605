@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
-    var gamesTableVC: GamesTableViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +46,6 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func setupGestureRecognizers() {
-        gamesTableVC = GamesTableViewController()
         
         let leftPanRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.handelLeftEdgePan(gestureRecognizer:)))
         leftPanRecognizer.edges = .left
