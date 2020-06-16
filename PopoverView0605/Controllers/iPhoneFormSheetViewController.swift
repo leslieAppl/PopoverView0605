@@ -39,6 +39,36 @@ extension iPhoneFormSheetViewController {
     }
     
     @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
-        dismiss(animated: true, completion: nil)
+        
+        let view = gestureRecognizer.view!
+        
+        switch gestureRecognizer.state {
+        case .began, .changed:
+            moveViewWithPan(view: view, sender: gestureRecognizer)
+        case .ended:
+            deleteView(view: view)
+        default:
+            break
+        }
+        
     }
+    
+    func moveViewWithPan(view: UIView, sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translation(in: view)
+        
+        /// Tracking target view's routing corresponding to the pan gesture translation in the coordinate system of the specified view.
+        view.center = CGPoint(x: view.center.x, y: view.center.y+translation.y)
+        
+        /// Resetting translation value to zero after pan gesture finished.
+        sender.setTranslation(CGPoint.zero, in: view)
+
+    }
+
+    func deleteView(view: UIView) {
+        UIView.animate(withDuration: 0.3) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+
 }
