@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,10 +35,16 @@ class ViewController: UIViewController {
         else if let controller = segue.destination as? GamesTableViewController {
             if segue.identifier == "SummerSegue" {
                 slideInTransitioningDelegate.direction = .left
+                print(slideInTransitioningDelegate.direction)
             }
             else if segue.identifier == "WinterSegue" {
                 slideInTransitioningDelegate.direction = .right
+                print(slideInTransitioningDelegate.direction)
             }
+            
+            controller.transitioningDelegate = slideInTransitioningDelegate
+            controller.modalPresentationStyle = .custom
+            
         }
     }
 }
