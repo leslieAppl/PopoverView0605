@@ -44,6 +44,17 @@
 
 ## Improved pan gesture dissmissing form sheet view through tracking pan translation value of coordinate.Y
         
+        class iPhoneFormSheetViewController: UIViewController {
+
+            var viewCenterOrigin: CGPoint!
+
+            override func viewDidLoad() {
+                super.viewDidLoad()
+                viewCenterOrigin = view.center
+                setupGestureRecognizers()
+            }
+        }
+        
         extension iPhoneFormSheetViewController {
             func setupGestureRecognizers() {
                 let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(gestureRecognizer:)))
@@ -53,12 +64,18 @@
             @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
                 
                 let view = gestureRecognizer.view!
+                let translation = gestureRecognizer.translation(in: view)
                 
                 switch gestureRecognizer.state {
                 case .began, .changed:
-                    moveViewWithPan(view: view, sender: gestureRecognizer)
+                    ///To provent swiping upward animation
+                    if (view.center.y+translation.y) > viewCenterOrigin.y {
+                        moveViewWithPan(view: view, sender: gestureRecognizer)
+                    }
                 case .ended:
-                    deleteView(view: view)
+                    if (view.center.y+translation.y) > viewCenterOrigin.y {
+                        self.deleteView()
+                    }
                 default:
                     break
                 }
@@ -74,14 +91,12 @@
                 
                 /// Resetting translation value to zero after pan gesture finished.
                 sender.setTranslation(CGPoint.zero, in: view)
-
             }
 
-            func deleteView(view: UIView) {
+            func deleteView() {
                 UIView.animate(withDuration: 0.3) {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-
+            
         }
-
