@@ -103,4 +103,5 @@
 
 ## Customizing Presentation and Animation Controller
 
--   Finished Infrastructure
+- Finished Infrastructure
+- Finished presentation and animation movement
