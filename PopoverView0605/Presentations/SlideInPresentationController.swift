@@ -8,6 +8,12 @@
 
 import UIKit
 
+//  MARK: - UIPresentationController
+/// An object that manages the transition animations and the presentation of view controllers onscreen.
+/// From the time a view controller is presented until the time it is dismissed, UIKit uses a presentation controller to manage various aspects of the presentation process for that view controller.
+/// The presentation controller can add its own animations on top of those provided by animator objects, it can respond to size changes, and it can manage other aspects of how the view controller is presented onscreen.
+/// When you present a view controller using the present(_:animated:completion:) method, UIKit always manages the presentation process. Part of that process involves creating the presentation controller that is appropriate for the given presentation style.
+/// You vend your custom presentation controller object through your view controller’s transitioning delegate. UIKit maintains a reference to your presentation controller object while the presented view controller is onscreen.
 class SlideInPresentationController: UIPresentationController {
     
     private var direction: PresentationDirection

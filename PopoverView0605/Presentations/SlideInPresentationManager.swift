@@ -21,6 +21,13 @@ class SlideInPresentationManager: NSObject {
     var disableCompactHeight = false
 }
 
+//  MARK: - UIViewControllerTransitioningDelegate
+/// 1.
+/// When you want to present a view controller using a custom modal presentation type, set its modalPresentationStyle property to custom and assign an object that conforms to this protocol to its transitioningDelegate property. - Step 7, 8
+/// 2.
+/// When you present that view controller, UIKit queries your [transitioning delegate] for the objects to use when animating the view controller into position.
+/// 3.
+/// When implementing your [transitioning delegate object], you can return different [animator objects] depending on whether a view controller is being presented or dismissed. All transitions use a transition animator object—an object that conforms to the UIViewControllerAnimatedTransitioning protocol—to implement the basic animations. - Step 20
 extension SlideInPresentationManager: UIViewControllerTransitioningDelegate {
     
     /// Hooking up the presentation  controller

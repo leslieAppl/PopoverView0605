@@ -20,6 +20,8 @@ class SlideInPresentationAnimator: NSObject {
     }
 }
 
+//MARK: - UIViewControllerAnimatedTransitioning
+/// The methods in this protocol let you define an animator object, which creates the animations for transitioning a view controller on or off screen in a fixed amount of time.
 extension SlideInPresentationAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
