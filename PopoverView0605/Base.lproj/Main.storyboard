@@ -56,40 +56,30 @@
                                     <constraint firstAttribute="height" constant="224" id="oYI-qV-R1n"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeUpSign" translatesAutoresizingMaskIntoConstraints="NO" id="aYw-Eb-B5X">
-                                <rect key="frame" x="160" y="612" width="55" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="SFL-oC-8EA"/>
-                                    <constraint firstAttribute="width" constant="55" id="ym6-5A-s9G"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeDownSign" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-B8-e8O">
-                                <rect key="frame" x="160" y="0.0" width="55" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="MKo-sn-cuU"/>
-                                    <constraint firstAttribute="width" constant="55" id="Oqw-pY-657"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up !!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-qz-Xby">
+                                <rect key="frame" x="121.5" y="617" width="132.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.59851241440000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ymt-qz-Xby" secondAttribute="bottom" constant="20" id="26m-gl-pby"/>
                             <constraint firstItem="RVD-iq-Sv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sh-Kk-ZKJ"/>
-                            <constraint firstItem="aYw-Eb-B5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="70C-AE-q8G"/>
                             <constraint firstItem="Dgp-RH-m2v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7T1-dd-ZBm"/>
                             <constraint firstItem="NK2-N5-Qm1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="817-dW-Qi3"/>
-                            <constraint firstItem="aYw-Eb-B5X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8ke-8u-tVi"/>
                             <constraint firstItem="nI1-mb-Mx4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9mn-4F-kus"/>
                             <constraint firstItem="Dgp-RH-m2v" firstAttribute="top" secondItem="KVG-Q2-kpQ" secondAttribute="bottom" constant="20" id="HmP-O0-SVy"/>
                             <constraint firstItem="nI1-mb-Mx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mgb-XO-cvP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NK2-N5-Qm1" secondAttribute="trailing" id="b7n-g0-Eza"/>
                             <constraint firstItem="KVG-Q2-kpQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dQL-gt-h73"/>
                             <constraint firstItem="KVG-Q2-kpQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h9y-jO-8Aw"/>
+                            <constraint firstItem="Ymt-qz-Xby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hu5-bE-Gpd"/>
                             <constraint firstItem="KVG-Q2-kpQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kPF-h5-fB9"/>
                             <constraint firstItem="RVD-iq-Sv9" firstAttribute="top" secondItem="Dgp-RH-m2v" secondAttribute="bottom" constant="80" id="lhJ-eo-nco"/>
-                            <constraint firstItem="Lqw-B8-e8O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nPe-bN-C0q"/>
                             <constraint firstItem="fWW-Ae-Ieq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdo-bq-CP8"/>
                             <constraint firstItem="fWW-Ae-Ieq" firstAttribute="top" secondItem="RVD-iq-Sv9" secondAttribute="bottom" constant="80" id="t1e-iB-RS5"/>
-                            <constraint firstItem="Lqw-B8-e8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbC-d4-RsT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -662,8 +652,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SwipeDownSign" width="82" height="74"/>
-        <image name="SwipeUpSign" width="82" height="74"/>
         <image name="book7" width="108" height="166"/>
         <image name="bronze" width="150" height="150"/>
         <image name="clear" catalog="system" width="128" height="114"/>
