@@ -101,7 +101,9 @@
             
         }
 
-## Customizing Presentation and Animation Controller
+## Custom Presentation and Animation
 
 - Finished Infrastructure
 - Finished presentation and animation movement
+- Inserting and dismissing custom subView (dimming view) during the custom presentation
+- UIPanGestureRecognizer: handling swiping directions

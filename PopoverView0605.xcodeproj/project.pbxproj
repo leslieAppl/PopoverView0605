@@ -20,6 +20,7 @@
 		CE9DEED6248A67AF0005D42C /* FormSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */; };
 		CEBBB62A2498C308004744D4 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB6292498C308004744D4 /* SlideInPresentationController.swift */; };
 		CEBBB62C2498C6DE004744D4 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB62B2498C6DE004744D4 /* SlideInPresentationAnimator.swift */; };
+		CEBBB62E249B13E2004744D4 /* MedalCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBBB62D249B13E2004744D4 /* MedalCountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSheetViewController.swift; sourceTree = "<group>"; };
 		CEBBB6292498C308004744D4 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		CEBBB62B2498C6DE004744D4 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
+		CEBBB62D249B13E2004744D4 /* MedalCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalCountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE9DEED5248A67AF0005D42C /* FormSheetViewController.swift */,
 				CE828700248B0301008CA032 /* iPhoneFormSheetViewController.swift */,
 				CE9C06EE249675360070D747 /* GamesTableViewController.swift */,
+				CEBBB62D249B13E2004744D4 /* MedalCountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				CE9DEEC02489EC6F0005D42C /* AppDelegate.swift in Sources */,
 				CE9C06EF249675360070D747 /* GamesTableViewController.swift in Sources */,
 				CEBBB62A2498C308004744D4 /* SlideInPresentationController.swift in Sources */,
+				CEBBB62E249B13E2004744D4 /* MedalCountViewController.swift in Sources */,
 				CE9DEEC22489EC6F0005D42C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

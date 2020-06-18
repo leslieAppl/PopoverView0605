@@ -48,7 +48,7 @@ extension iPhoneFormSheetViewController {
         
         switch gestureRecognizer.state {
         case .began, .changed:
-            ///To provent swiping upward animation
+            ///Handling swiping direction to provent swiping upward animation
             if (view.center.y+translation.y) > viewCenterOrigin.y {
                 moveViewWithPan(view: view, sender: gestureRecognizer)
             }

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupGestureRecognizers()
     }
     
@@ -46,6 +45,13 @@ class ViewController: UIViewController {
             controller.modalPresentationStyle = .custom
             
         }
+        else if let controller = segue.destination as? MedalCountViewController {
+            slideInTransitioningDelegate.direction = .bottom
+            print(slideInTransitioningDelegate.direction)
+            
+            controller.transitioningDelegate = slideInTransitioningDelegate
+            controller.modalPresentationStyle = .custom
+        }
     }
 }
 
@@ -53,17 +59,20 @@ extension ViewController {
     
     func setupGestureRecognizers() {
         
-        let leftPanRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.handelLeftEdgePan(gestureRecognizer:)))
+        let leftPanRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.handleLeftEdgePan(gestureRecognizer:)))
         leftPanRecognizer.edges = .left
         
-        let rightPanRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.handelRightEdgePan(gestuerRecognizer:)))
+        let rightPanRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.handleRightEdgePan(gestureRecognizer:)))
         rightPanRecognizer.edges = .right
+        
+        let swipeUpRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleSwipeUp(gestureRecognizer:)))
         
         view.addGestureRecognizer(leftPanRecognizer)
         view.addGestureRecognizer(rightPanRecognizer)
+        view.addGestureRecognizer(swipeUpRecognizer)
     }
     
-    @objc func handelLeftEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+    @objc func handleLeftEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         
         /// If didn't have the .began state checking, there will be the warning below
         /// Warning: Attempt to present * on * which is already presenting
@@ -72,11 +81,60 @@ extension ViewController {
         }
     }
     
-    @objc func handelRightEdgePan(gestuerRecognizer: UIScreenEdgePanGestureRecognizer) {
+    @objc func handleRightEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         /// If didn't have the .began state checking, there will be the warning below
         /// Warning: Attempt to present * on * which is already presenting
-        if gestuerRecognizer.state == .began {
+        if gestureRecognizer.state == .began {
             performSegue(withIdentifier: "WinterSegue", sender: nil)
+        }
+    }
+    
+    @objc func handleSwipeUp(gestureRecognizer: UIPanGestureRecognizer) {
+        
+        let view = gestureRecognizer.view!
+        let translation = gestureRecognizer.translation(in: view)
+        
+        //handling swiping directions
+        switch gestureRecognizer.state {
+        case .began, .changed:
+            //swiping up
+            if translation.y < 0 {
+                print("swiping up")
+            }
+            //swiping down
+            else if translation.y > 0 {
+                print("swiping down")
+            }
+            //swiping right
+            else if translation.x > 0 {
+                print("swiping right")
+            }
+            //swiping left
+            else if translation.x < 0 {
+                print("swiping left")
+            }
+            
+        case .ended:
+            //swiping up
+            if translation.y < 0 {
+                print("swiping up")
+                performSegue(withIdentifier: "MedalSegue", sender: nil)
+            }
+            //swiping down
+            else if translation.y > 0 {
+                print("swiping down")
+            }
+            //swiping right
+            else if translation.x > 0 {
+                print("swiping right")
+            }
+            //swiping left
+            else if translation.x < 0 {
+                print("swiping left")
+            }
+
+        default:
+            break
         }
     }
 }
