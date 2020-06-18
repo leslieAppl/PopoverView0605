@@ -18,9 +18,11 @@ class PopoverViewController: UIViewController {
 }
 
 extension PopoverViewController: UIAdaptivePresentationControllerDelegate {
+    
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         //This tells the UIPresentationController object that we want the view to be presented with its original presentation style (not its default fullScreen on small size iPhone),
         //so the view always looks like a popover, no matter the Size Class.
         return .none
     }
+    
 }

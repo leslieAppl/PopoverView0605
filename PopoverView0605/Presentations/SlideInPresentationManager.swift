@@ -17,7 +17,6 @@ enum PresentationDirection {
 
 class SlideInPresentationManager: NSObject {
     var direction: PresentationDirection = .left
-    
     var disableCompactHeight = false
 }
 
@@ -35,6 +34,9 @@ extension SlideInPresentationManager: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         
         let presentationController = SlideInPresentationController(presentedViewController: presented, presenting: presenting, direction: direction)
+        
+        ///Adaptive presentation controller delegate
+        presentationController.delegate = self
         
         return presentationController
     }
@@ -55,5 +57,24 @@ extension SlideInPresentationManager: UIViewControllerTransitioningDelegate {
         let presentationAnimator = SlideInPresentationAnimator(direction: direction, isPresentation: false)
         
         return presentationAnimator
+    }
+}
+
+extension SlideInPresentationManager: UIAdaptivePresentationControllerDelegate {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        
+        if traitCollection.verticalSizeClass == .compact && disableCompactHeight {
+            return .fullScreen
+        }
+        else {
+            return .none
+        }
+    }
+    
+    ///Presenting adaptive view controller according to size traits
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        guard case(.fullScreen) = style else { return nil }
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RotateViewController")
     }
 }

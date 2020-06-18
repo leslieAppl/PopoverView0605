@@ -107,3 +107,4 @@
 - Finished presentation and animation movement
 - Inserting and dismissing custom subView (dimming view) during the custom presentation
 - UIPanGestureRecognizer: handling swiping directions
+- UIAdaptivePresentationControllerDelegate: Presenting adaptive view controller according to size traits 

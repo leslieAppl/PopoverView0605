@@ -47,6 +47,7 @@ class ViewController: UIViewController {
             controller.transitioningDelegate = slideInTransitioningDelegate
             controller.modalPresentationStyle = .custom
             
+            slideInTransitioningDelegate.disableCompactHeight = false
         }
         else if let controller = segue.destination as? MedalCountViewController {
             slideInTransitioningDelegate.direction = .bottom
@@ -54,6 +55,9 @@ class ViewController: UIViewController {
             
             controller.transitioningDelegate = slideInTransitioningDelegate
             controller.modalPresentationStyle = .custom
+            
+            slideInTransitioningDelegate.disableCompactHeight = true
+            
         }
     }
 }
@@ -141,3 +145,4 @@ extension ViewController {
         }
     }
 }
+
