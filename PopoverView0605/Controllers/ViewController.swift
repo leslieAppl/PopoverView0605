@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var swipeUpView: UIView!
+    @IBOutlet weak var swipeUpLbl: UILabel!
+    
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
     override func viewDidLoad() {
@@ -69,7 +72,7 @@ extension ViewController {
         
         view.addGestureRecognizer(leftPanRecognizer)
         view.addGestureRecognizer(rightPanRecognizer)
-        view.addGestureRecognizer(swipeUpRecognizer)
+        swipeUpView.addGestureRecognizer(swipeUpRecognizer)
     }
     
     @objc func handleLeftEdgePan(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
